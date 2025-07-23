@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import ScreenshotsSection from "@/components/ui/CarousselScreen";
-import { CheckCircle, Play, Star, Users, Award, Shield, Clock, Download, PieChart, ArrowUp } from "lucide-react";
+import { CheckCircle, Play, Star, Users, Award, Shield, Clock, Download, PieChart, ArrowUp, Twitter, Instagram, Facebook, Linkedin, Github } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Index() {
@@ -15,8 +15,19 @@ export default function Index() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const fileUrl = "public/app-release.apk"; // ajuste para o caminho do seu arquivo
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "spendo-app.apk"; // nome para salvar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
-    
+
     <div className="min-h-screen bg-white">
       <Header />
 
@@ -45,14 +56,13 @@ export default function Index() {
 
               {/* Download buttons */}
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                {/* <Button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-medium flex items-center gap-2">
-                  <Download className="w-5 h-5" />
-                  Download on App Store
-                </Button> */}
-                <Button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-medium flex items-center gap-2">
+                <button
+                  onClick={handleDownload}
+                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-medium flex items-center gap-2"
+                >
                   <Download className="w-5 h-5" />
                   Baixe agora
-                </Button>
+                </button>
               </div>
 
               {/* Trust indicators */}
@@ -72,40 +82,12 @@ export default function Index() {
                 {/* Center phone */}
                 <div className="relative z-10">
                   <div className="w-64 h-[520px] bg-black rounded-[2.5rem] p-2 shadow-2xl">
-                    <div className="w-full h-full bg-white rounded-[2rem] p-4 overflow-hidden">
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <div className="w-6 h-6 bg-purple-600 rounded-full"></div>
-                          <div className="text-2xl font-bold">$34,582.64</div>
-                          <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
-                        </div>
-                        <div className="bg-purple-600 text-white p-4 rounded-2xl">
-                          <div className="text-sm opacity-90">Available Balance</div>
-                          <div className="text-2xl font-bold">$25,482.64</div>
-                        </div>
-                        <div className="space-y-3">
-                          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-green-500 rounded-full"></div>
-                              <div>
-                                <div className="font-medium">Income</div>
-                                <div className="text-sm text-gray-500">Today</div>
-                              </div>
-                            </div>
-                            <div className="text-green-600 font-bold">+$1,200</div>
-                          </div>
-                          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 bg-red-500 rounded-full"></div>
-                              <div>
-                                <div className="font-medium">Expense</div>
-                                <div className="text-sm text-gray-500">Today</div>
-                              </div>
-                            </div>
-                            <div className="text-red-600 font-bold">-$320</div>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      <img
+                        src="client/images/Screen10.jpeg" // <-- Altere esse caminho para sua imagem
+                        alt="Preview do App"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -152,10 +134,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              The Product We Work With
+              O que o Spendo oferece
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-16">
-              Comprehensive features that help you build the perfect product
+              Descubra as vantagens da nossa solução de controle financeiro.
             </p>
           </div>
 
@@ -193,8 +175,8 @@ export default function Index() {
         </div>
       </section>
       {/* App Screenshots */}
-       <ScreenshotsSection />
-      
+      <ScreenshotsSection />
+
 
       {/* Final CTA */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 text-white" style={{ background: "#4678c0" }}>
@@ -221,68 +203,49 @@ export default function Index() {
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Logo and description */}
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img src="client/images/IconSpendo.png" alt="Spendo" className="w-8 h-8" />
-                <span className="text-xl font-bold text-gray-900">Spendo</span>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Controle seus gastos com o Spendo. Uma maneira simples e intuitiva de gerenciar suas financas pessoais.
-              </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* Logo e descrição opcional */}
+            <div className="flex items-center space-x-2">
+              <img src="client/images/IconSpendo.png" alt="Spendo" className="w-8 h-8" />
+              <span className="text-xl font-bold text-gray-900">Spendo</span>
             </div>
 
-            {/* Links */}
+            {/* Privacy Policy */}
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Links</h4>
-              <div className="space-y-2 text-sm">
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Home</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">About</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Services</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Contact</a></div>
-              </div>
+              <a href="/politica" className="text-sm text-gray-600 hover:text-blue-600">
+                Privacy Policy
+              </a>
             </div>
 
-            <div>
-              <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
-              <div className="space-y-2 text-sm">
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Privacy Policy</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Terms of Service</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Cookie Policy</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Support</a></div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-gray-900 mb-4">Product</h4>
-              <div className="space-y-2 text-sm">
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Features</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Pricing</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">Documentation</a></div>
-                <div><a href="#" className="text-gray-600 hover:text-purple-600">API</a></div>
-              </div>
+            {/* Redes sociais */}
+            <div className="flex space-x-4">
+              <a href="https://www.linkedin.com/in/cauãmendes" className="text-gray-600 hover:text-blue-600">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/Mendescaua" className="text-gray-600 hover:text-blue-600">
+                <Github className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
-          <div className="border-t border-gray-200 mt-12 pt-8 text-center">
+          {/* Copyright */}
+          <div className="border-t border-gray-200 mt-8 pt-6 text-center">
             <p className="text-sm text-gray-600">
-              © 2024 Frybix. All rights reserved.
+              © 2025 Spendo. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
-       {/* Botão flutuante "voltar ao topo" */}
+      {/* Botão flutuante "voltar ao topo" */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-6 right-6 z-50  text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${
-          showScrollButton ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed bottom-6 right-6 z-50  text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${showScrollButton ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         aria-label="Voltar ao topo"
-        style={{ backgroundColor: "#4678c0"}}
+        style={{ backgroundColor: "#4678c0" }}
       >
-        <ArrowUp/>
+        <ArrowUp />
       </button>
     </div>
   );

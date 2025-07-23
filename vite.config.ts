@@ -19,6 +19,14 @@ export default defineConfig(({ mode }) => ({
       "@shared": path.resolve(__dirname, "./shared"),
     },
   },
+  configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url?.endsWith('.apk')) {
+          res.setHeader('Content-Type', 'application/vnd.android.package-archive');
+        }
+        next();
+      });
+    },
 }));
 
 function expressPlugin(): Plugin {

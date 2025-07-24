@@ -6,15 +6,15 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // ou outro pacote de ícones que preferir
 
 const imagens = [
-  'client/images/Screen1.jpeg',
-  'client/images/Screen2.jpeg',
-  'client/images/Screen3.jpeg',
-  'client/images/Screen4.jpeg',
-  'client/images/Screen5.jpeg',
-  'client/images/Screen6.jpeg',
-  'client/images/Screen7.jpeg',
-  'client/images/Screen8.jpeg',
-  'client/images/Screen9.jpeg',
+  'client/images/screen1.jpeg',
+  'client/images/screen2.jpeg',
+  'client/images/screen3.jpeg',
+  'client/images/screen4.jpeg',
+  'client/images/screen5.jpeg',
+  'client/images/screen6.jpeg',
+  'client/images/screen7.jpeg',
+  'client/images/screen8.jpeg',
+  'client/images/screen9.jpeg',
 ];
 
 export default function ScreenshotsSection() {

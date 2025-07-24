@@ -14,8 +14,3 @@
   status = 200
   to = "/.netlify/functions/api/:splat"
 
-  [[headers]]
-  for = "/app-release.apk"
-  [headers.values]
-    Content-Type = "application/vnd.android.package-archive"
-

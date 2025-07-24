@@ -16,7 +16,7 @@ export default function Index() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const fileUrl = "public/app-release.apk"; // ajuste para o caminho do seu arquivo
+  const fileUrl = "https://drive.google.com/file/d/199pGPnxa0w9lDVoFcpIc5cAEXg-8DLyp/view?usp=sharing"; // ajuste para o caminho do seu arquivo
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -55,7 +55,7 @@ export default function Index() {
               </p>
 
               {/* Download buttons */}
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              {/* <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={handleDownload}
                   className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-medium flex items-center gap-2"
@@ -63,7 +63,7 @@ export default function Index() {
                   <Download className="w-5 h-5" />
                   Baixe agora
                 </button>
-              </div>
+              </div> */}
 
               {/* Trust indicators */}
               {/* <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-8 opacity-60">
@@ -193,7 +193,8 @@ export default function Index() {
 
           {/* Download buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-3">
+            <Button className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-3" 
+              style={{ height: "50px" }} onClick={handleDownload}>
               <Download className="w-6 h-6" />
               Baixe agora
             </Button>

@@ -208,7 +208,7 @@ export default function Index() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Logo e descrição opcional */}
             <div className="flex items-center space-x-2">
-              <img src="client/images/IconSpendo.png" alt="Spendo" className="w-8 h-8" />
+              <img src="client/images/iconspendo.png" alt="Spendo" className="w-8 h-8" />
               <span className="text-xl font-bold text-gray-900">Spendo</span>
             </div>
 

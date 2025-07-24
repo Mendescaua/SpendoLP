@@ -84,7 +84,7 @@ export default function Index() {
                   <div className="w-64 h-[520px] bg-black rounded-[2.5rem] p-2 shadow-2xl">
                     <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                       <img
-                        src="client/images/screen10.jpeg" // <-- Altere esse caminho para sua imagem
+                        src="public/images/screen10.jpeg" // <-- Altere esse caminho para sua imagem
                         alt="Preview do App"
                         className="w-full h-full object-cover"
                       />

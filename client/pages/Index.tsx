@@ -188,7 +188,7 @@ export default function Index() {
             Baixe agora!
           </h3>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Tenha controle completo de suas financas pessoais com o Spendo. Baixe agora e comece a gerenciar suas financas de uma maneira simples e intuitiva.
+            Tenha controle completo de suas finanças pessoais com o Spendo. Baixe agora e comece a gerenciar suas finanças de uma maneira simples e intuitiva.
           </p>
 
           {/* Download buttons */}

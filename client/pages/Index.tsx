@@ -84,7 +84,7 @@ export default function Index() {
                   <div className="w-64 h-[520px] bg-black rounded-[2.5rem] p-2 shadow-2xl">
                     <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                       <img
-                        src="public/images/screen10.jpeg" // <-- Altere esse caminho para sua imagem
+                        src="images/screen10.jpeg" // <-- Altere esse caminho para sua imagem
                         alt="Preview do App"
                         className="w-full h-full object-cover"
                       />
@@ -208,7 +208,7 @@ export default function Index() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Logo e descrição opcional */}
             <div className="flex items-center space-x-2">
-              <img src="public\images\iconspendo.png" alt="Spendo" className="w-8 h-8" />
+              <img src="images\iconspendo.png" alt="Spendo" className="w-8 h-8" />
               <span className="text-xl font-bold text-gray-900">Spendo</span>
             </div>
 

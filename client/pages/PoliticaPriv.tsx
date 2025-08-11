@@ -43,7 +43,7 @@ export default function PoliticaPrivacidade() {
       <h2 className="text-xl font-semibold mt-6 mb-2">7. Contato</h2>
       <p className="mb-4">
         Em caso de dúvidas sobre esta política, você pode entrar em contato através do e-mail: <br />
-        <span className="font-medium">suporte@spendo.app</span>
+        <span className="font-medium">cauamendes.code@gmail.com</span>
       </p>
 
       <p className="text-sm text-gray-500 mt-8">Última atualização: Julho de 2025</p>

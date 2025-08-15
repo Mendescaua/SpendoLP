@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
-  const fileUrl = "https://drive.google.com/file/d/199pGPnxa0w9lDVoFcpIc5cAEXg-8DLyp/view?usp=sharing"; // ajuste para o caminho do seu arquivo
+
+  const fileUrl = "https://play.google.com/store/apps/details?id=com.mendes.spendo.spendo"; // ajuste para o caminho do seu arquivo
 
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "spendo-app.apk"; // nome para salvar
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

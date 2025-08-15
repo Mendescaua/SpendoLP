@@ -193,7 +193,7 @@ export default function Index() {
 
           {/* Download buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-3" 
+            <Button className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-3"
               style={{ height: "50px" }} onClick={handleDownload}>
               <Download className="w-6 h-6" />
               Baixe agora
@@ -202,42 +202,46 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Logo e descrição opcional */}
-            <div className="flex items-center space-x-2">
-              <img src="images\iconspendo.png" alt="Spendo" className="w-8 h-8" />
-              <span className="text-xl font-bold text-gray-900">Spendo</span>
-            </div>
+     <footer className="bg-white border-t border-gray-200">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    {/* Linha de cima */}
+    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+      {/* Logo e descrição */}
+      <div className="flex items-center space-x-2">
+        <img src="images/iconspendo.png" alt="Spendo" className="w-8 h-8" />
+        <span className="text-xl font-bold text-gray-900">Spendo</span>
+      </div>
 
-            {/* Privacy Policy */}
-            <div>
-              <a href="/politica" className="text-sm text-gray-600 hover:text-blue-600">
-                Privacy Policy
-              </a>
-            </div>
+      {/* Links */}
+      <div className="flex space-x-4">
+        <a href="/politica" className="text-sm text-gray-600 hover:text-blue-600">
+          Política de Privacidade
+        </a>
+        <a href="/deleteAccount" className="text-sm text-gray-600 hover:text-blue-600">
+          Deletar Conta
+        </a>
+      </div>
 
-            {/* Redes sociais */}
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/cauãmendes" className="text-gray-600 hover:text-blue-600">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/Mendescaua" className="text-gray-600 hover:text-blue-600">
-                <Github className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+      {/* Redes sociais */}
+      <div className="flex space-x-4">
+        <a href="https://www.linkedin.com/in/cauãmendes" className="text-gray-600 hover:text-blue-600">
+          <Linkedin className="w-5 h-5" />
+        </a>
+        <a href="https://github.com/Mendescaua" className="text-gray-600 hover:text-blue-600">
+          <Github className="w-5 h-5" />
+        </a>
+      </div>
+    </div>
 
-          {/* Copyright */}
-          <div className="border-t border-gray-200 mt-8 pt-6 text-center">
-            <p className="text-sm text-gray-600">
-              © 2025 Spendo. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+    {/* Linha de baixo */}
+    <div className="border-t border-gray-200 mt-8 pt-6 w-full text-center">
+      <p className="text-sm text-gray-600">
+        © 2025 Spendo. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
       {/* Botão flutuante "voltar ao topo" */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
